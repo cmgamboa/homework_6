@@ -17,10 +17,13 @@ video.pause();
 });
 
 document.querySelector("#slower").addEventListener("click", function(){
-	let original = video.playbackRate()
-	original += 0.1;
-	video.playbackRate -= original;
-	console.log("Slow Down");
+	//let original = video.playbackRate()
+	//original += 0.1;
+	//video.playbackRate -= original;
+	//console.log("Slow Down");
+	console.log("Slow Video");
+	video.playbackRate *= 0.9;
+	console.log(video.playbackRate)
 });
 //slower
 document.querySelector("#faster").addEventListener("click", function() {
@@ -39,6 +42,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 	console.log(video.muted)
 	if (video.muted == false){
 		video.muted = true
+		this.innerHTML = "Mute"
 	}
 	else{
 		this.innerHTML = "Unmute"
@@ -52,6 +56,7 @@ document.querySelector("#volumeSlider").addEventListener("change", function() {
 	console.log("Volume Slider");
 	video.volume = this.value /100
 	console.log(this.value)
+	volume.innerHTML = this.value + "%"
 });
 document.querySelector("#original").addEventListener("click", function() {
 	console.log("Original");
