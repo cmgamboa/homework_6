@@ -3,7 +3,7 @@ var volume;
 
 window.addEventListener("load", function() {
 	video = document.querySelector("#myVideo");
-	volume = document.quer
+	volume = document.querySelector("#volume");
 });
 
 document.querySelector("#play").addEventListener("click", function() {
