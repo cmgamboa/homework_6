@@ -37,7 +37,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 	console.log(video.currentTime);
 	video.currentTime += 5
 	console.log(video.currentTime)
-	if (video.currentTime <= 32.99){
+	if (video.currentTime >= 32.99){
 		video.currentTime =0;
 	}
 });
